@@ -96,8 +96,12 @@ body {
     color: $white-color;
     cursor: pointer;
     font-size: 1.1rem;
+    transition: background-color 0.5s 0s ease;
     & span {
       opacity: 0.5;
+    }
+    &:hover {
+      background-color: $accent-secondary-color;
     }
   }
 }
@@ -140,6 +144,10 @@ body {
     color: $white-color;
     cursor: pointer;
     font-size: 1.1rem;
+    transition: background-color 0.5s 0s ease;
+    &:hover {
+      background-color: $accent-primary-color;
+    }
     & span {
       opacity: 0.5;
     }
@@ -153,12 +161,27 @@ body {
     background-color: $secondary-color;
     color: $white-color;
     font-size: 1.1rem;
+    transition: background-color 0.5s 0s ease;
+    &:hover {
+      background-color: $accent-secondary-color;
+    }
   }
   &__user-right {
     grid-area: banner__user-right;
   }
   &__user-right--photo {
     width: 100%;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }
 /* GALLERY */
@@ -169,6 +192,12 @@ body {
   }
   &__picture {
     width: 24%;
+
+    &:hover {
+      animation-name: pulse;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
   }
 }
 /* SEPARADOR ONE */
@@ -189,6 +218,11 @@ body {
     font-weight: 900;
     text-align: center;
     line-height: 1.625;
+    transition: background-color 0.5s 0s ease;
+    &:hover{
+        background-color:   $primary-color;
+        color: #fff;
+    }
   }
 }
 /* MEETING */
@@ -237,6 +271,11 @@ body {
     font-weight: 900;
     text-align: center;
     line-height: 1.625;
+    transition: background-color 0.5s 0s ease;
+    &:hover{
+        background-color:   $primary-color;
+        color: #fff;
+    }
   }
 }
 /* MEDIA QUERIES 1024 */
@@ -358,16 +397,16 @@ body {
   }
 }
 /* MEDIA QUERIES 425px */
-@media screen and (max-width:425px){
-     /* MEETING */
-   .banner{
-       &__paragraph{
-           font-size: 14px;
-       }
-   }
+@media screen and (max-width: 425px) {
+  /* MEETING */
+  .banner {
+    &__paragraph {
+      font-size: 14px;
+    }
+  }
   .meeting {
-    &__secondheading{
-        font-size:36px;
+    &__secondheading {
+      font-size: 36px;
     }
     &__paragraph {
       font-size: 14px;
@@ -379,7 +418,7 @@ body {
   .banner {
     &__heading {
       width: 100%;
-      font-size:28px;
+      font-size: 28px;
     }
     &__btn--download {
       width: 200px;
@@ -393,7 +432,7 @@ body {
   .meeting {
     &__secondheading {
       width: 100%;
-      font-size:28px;
+      font-size: 28px;
     }
   }
   .gallery {

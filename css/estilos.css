@@ -146,10 +146,16 @@ body {
   color: #FAFAFA;
   cursor: pointer;
   font-size: 1.1rem;
+  -webkit-transition: background-color 0.5s 0s ease;
+  transition: background-color 0.5s 0s ease;
 }
 
 .footer__btn span {
   opacity: 0.5;
+}
+
+.footer__btn:hover {
+  background-color: #D9B8FF;
 }
 
 /* BANNER */
@@ -213,6 +219,12 @@ body {
   color: #FAFAFA;
   cursor: pointer;
   font-size: 1.1rem;
+  -webkit-transition: background-color 0.5s 0s ease;
+  transition: background-color 0.5s 0s ease;
+}
+
+.banner__btn--download:hover {
+  background-color: #8FE3F9;
 }
 
 .banner__btn--download span {
@@ -228,6 +240,12 @@ body {
   background-color: #855FB1;
   color: #FAFAFA;
   font-size: 1.1rem;
+  -webkit-transition: background-color 0.5s 0s ease;
+  transition: background-color 0.5s 0s ease;
+}
+
+.banner__btn:hover {
+  background-color: #D9B8FF;
 }
 
 .banner__user-right {
@@ -240,6 +258,36 @@ body {
   width: 100%;
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
 /* GALLERY */
 .gallery__photo {
   width: 100%;
@@ -248,6 +296,15 @@ body {
 
 .gallery__picture {
   width: 24%;
+}
+
+.gallery__picture:hover {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 /* SEPARADOR ONE */
@@ -268,6 +325,13 @@ body {
   font-weight: 900;
   text-align: center;
   line-height: 1.625;
+  -webkit-transition: background-color 0.5s 0s ease;
+  transition: background-color 0.5s 0s ease;
+}
+
+.separadorOne__number:hover {
+  background-color: #4D96A9;
+  color: #fff;
 }
 
 /* MEETING */
@@ -328,6 +392,13 @@ body {
   font-weight: 900;
   text-align: center;
   line-height: 1.625;
+  -webkit-transition: background-color 0.5s 0s ease;
+  transition: background-color 0.5s 0s ease;
+}
+
+.separadorTwo__number:hover {
+  background-color: #4D96A9;
+  color: #fff;
 }
 
 /* MEDIA QUERIES 1024 */
